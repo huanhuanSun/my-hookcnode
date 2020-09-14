@@ -1,25 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {Switch,Route} from 'react-router-dom'
+import routes from './Router/routes.js'
+import { Button, Layout } from 'antd';
+import { useSelector } from 'react-redux';
+import Header from './Component/header'
+import Footer from './Component/footer.js';
+import './Static/css/index.css'
+import moment from 'moment'
+import 'moment/locale/zh-cn';
+moment.locale('zh-cn');
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Layout className="page">
+        <Header />
+        <Layout.Content>
+          <div className="wrap">
+            <Switch>
+              {routes.map((item,index)=>{
+                return (<Route 
+                            key={index} 
+                            path={item.path} 
+                            exact={item.exact} 
+                            render={(props)=>{
+                              props.uername='shh'
+                              return item.render(props)
+                            }}>
+                        </Route>)
+                  })}
+            </Switch>
+          </div>
+        </Layout.Content>
+        <Footer />
+      </Layout>
+    </>
   );
 }
 

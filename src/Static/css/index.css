@@ -1,0 +1,123 @@
+.wrap{
+    margin: 0 5px;
+    /* background-color: pink; */
+}
+html{
+    overflow: hidden;
+}
+#footer{
+    padding: 10px 0;
+    text-align: center;
+}
+#header{
+    /* height: auto; */
+    padding: 0;
+}
+#header .logo{
+    margin: 0;
+    text-align: center;
+}
+#root{
+    height: 100vh;
+}
+#root .page{
+    min-height: 100vh;
+}
+#root img{
+    max-width: 100%;
+}
+@media all and (min-width:576px){
+    .wrap{
+        margin: 0 10px;
+    }
+}
+/* >768*/
+@media all and (min-width:768px){
+    .wrap{
+        margin: 0 15px;
+    }
+    .list_page .list{
+        padding: 0 20px;
+    }
+}
+/* >992*/
+@media all and (min-width:992px){
+    .wrap{
+        margin: 0 auto;
+        width: 980px;
+    }
+}
+/* >1200*/
+@media all and (min-width:1200px){
+    .wrap{
+        margin: 0 auto;
+        width: 980px;
+    }
+}
+@media all and (min-width:1600px){
+    .wrap{
+        margin: 0 auto;
+        width: 1200px;
+    }
+}
+.index_page{
+    height: calc(100vh - 42px);
+    overflow-y: scroll;
+}
+.list .list_avatar{
+    margin-right: 10px;
+}
+.list_page{
+    /* height: calc(100% - 200px);
+    overflow-y: scroll; */
+}
+.list_page .list{
+    padding: 0 15px;
+}
+.list_page .list .time_wrap{
+    text-align: right;
+}
+.list_page .list .cont_wrap{
+    width: 70px;
+    text-align: center;
+    display: inline-block;
+    margin: 0 5px;
+    color: #aaa;
+}
+.list_page .list  .topic_list_title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.tag_ask,.tag_job,.tag_dev{
+    color: #555;
+}
+.page_nation .ant-pagination-options{
+    display: none;
+}
+.page_nation{
+    text-align: center;
+}
+.topic_detail{
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    padding: 10px;
+}
+.user_page{
+    height: calc(100vh - 42px);
+    overflow-y: scroll;
+
+}
+.user_title{
+    text-align: center;
+    margin-top: 10px;
+}
+.new_page{
+    padding: 10px 24px;
+}
+.new_page .new_nav{
+    padding: 20px 0;
+}
+.new_content{
+    height: calc(100vh - 180px);
+    overflow-y: scroll;
+}
